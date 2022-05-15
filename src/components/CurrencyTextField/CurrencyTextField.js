@@ -32,7 +32,7 @@ class CurrencyTextField extends React.Component {
   }
 
   componentDidMount() {
-    const { currencySymbol, ...others } = this.props
+    const { currencySymbol, autonumericOverrideProps, ...others } = this.props
     this.autonumeric = new AutoNumeric(this.input, this.props.value, {
       ...this.props.preDefined,
       ...others,
@@ -43,7 +43,7 @@ class CurrencyTextField extends React.Component {
       onKeyUp: undefined,
       onKeyDown: undefined,
       watchExternalChanges: false,
-      ...others.autonumericOverrideProps
+      ...autonumericOverrideProps
     })
   }
   componentWillUnmount() {
