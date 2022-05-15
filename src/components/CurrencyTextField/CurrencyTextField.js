@@ -43,6 +43,7 @@ class CurrencyTextField extends React.Component {
       onKeyUp: undefined,
       onKeyDown: undefined,
       watchExternalChanges: false,
+      ...others.autonumericOverrideProps
     })
   }
   componentWillUnmount() {
